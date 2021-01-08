@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
+
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<!-- <div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="imgs/final2.png" style="width:100%; height: auto;">
+  <div class="text">Caption Text</div>
+</div> -->
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <div class="row"></div>
+  <div class="col">
+    <img src="imgs/final1.png" style="width:100%">
+  </div>
+  <div class="col">
+    <img src="imgs/GIF-instruccion-1.gif" style="width:100%">
+  </div>
+    </div> 
+    <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <div class="row"></div>
+  <div class="col">
+    <img src="imgs/final3.png" style="width:100%">
+  </div>
+  <div class="col">
+    <img src="imgs/GIF-instruccion-2.gif" style="width:100%">
+  </div>
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <div class="row"></div>
+  <div class="col">
+    <img src="imgs/final4.png" style="width:100%">
+  </div>
+  <div class="col">
+    <img src="imgs/GIF-instruccion-3.gif" style="width:100%">
+  </div>
+    <div class="text">Caption Text</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="imgs/final5.png" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <div class="row"></div>
+    <div class="col">
+      <img src="imgs/final6.png" style="width:100%">
+      <button class="btn" onclick=" window.open('mover_by_shape.html','_blank')"> Jugar con Formas</button>
+    </div>
+    <div class="col">
+      <img src="imgs/GIF-instruccion-4.gif" style="width:100%">
+    </div>
+    <div class="text">Caption Three</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <div class="row"></div>
+    <div class="col">
+      <img src="imgs/final7.png" style="width:100%">
+      <button class="btn" onclick=" window.open('mover_by_color.html','_blank')"> Jugar con colores</button>
+    </div>
+    <div class="col">
+      <img src="imgs/GIF-instruccion-5.gif" style="width:100%">
+    </div>
+    <div class="text">Caption Text</div>
+  </div>
+  <div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="imgs/final2.png" style="width:100%; height: auto;">
+  <div class="text">Caption Text</div>
+</div>
+ 
+
+<a class="prev" onclick="plusSlides(-1)"> &#10094;</a>
+<a class="next" onclick="plusSlides(1)"> siguiente  &#10095;</a>
+
+</div>
+<br>
+
+ 
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
